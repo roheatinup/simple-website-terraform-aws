@@ -2,11 +2,11 @@ name: CD
 
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
     paths:
       - 'infra/**'
   push:
-    branches: [main]
+    branches: [master]
 
 permissions:
   id-token: write

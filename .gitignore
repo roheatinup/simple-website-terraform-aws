@@ -1,6 +1,11 @@
+# Terraform local files
 .terraform/
+infra/envs/staging/.terraform/
 .terraform.lock.hcl
+infra/envs/staging/.terraform.lock.hcl
 *.tfstate
+infra/envs/staging/terraform.tfstate
+infra/envs/staging/terraform.tfstate.backup
 *.tfstate.backup
 *.tfvars
 override.tf
@@ -10,7 +15,8 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-tag=terraform.tfstate* 
+# Ignore legacy Terraform state tags
+tag=terraform.tfstate*
 
 # Next.js / Node
 simple-website-terraform-aws/node_modules/
