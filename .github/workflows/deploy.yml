@@ -46,7 +46,7 @@ jobs:
         run: terraform plan -no-color
 
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     name: Deploy to staging
     runs-on: ubuntu-latest
 
