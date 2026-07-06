@@ -1,7 +1,7 @@
 // Backend is configured at CI runtime using `terraform init -backend-config`.
-// Keep this file empty so CI can supply backend settings via workflow secrets.
+// The empty backend block is required so Terraform knows to use S3.
 
 terraform {
-  # backend configuration is provided by CI at init time
+  backend "s3" {}
 }
 
